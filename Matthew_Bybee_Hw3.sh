@@ -1,3 +1,12 @@
+function getHelp(){
+	echo "Help has arrived!"
+	echo "This file will run automatically, checking if the fredData/MM directory structure exists on the machine this is currently running on and moving the FRED.csv file from hvalle's account without issue, assuming the SSH keys are set up correctly."
+}
+if [ "$1" == "--help" ]
+then
+	getHelp
+	exit 1
+fi
 
 if [ ! -d "$HOME/fredData/12" ]
 then
